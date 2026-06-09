@@ -1,3 +1,4 @@
+console.log("VERSAO 2026 TESTE");
 // ======================
 // CARROSSEL DE FOTOS
 // ======================
