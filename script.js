@@ -24,15 +24,27 @@ setInterval(() => {
         currentImage = 0;
     }
 
+setInterval(() => {
+
+    currentImage++;
+
+    if(currentImage >= images.length){
+        currentImage = 0;
+    }
+
     albumImage.style.opacity = 0;
 
     setTimeout(() => {
 
         albumImage.src = images[currentImage];
 
-        albumImage.style.opacity = 1;
+        albumImage.onload = () => {
+            albumImage.style.opacity = 1;
+        };
 
-    }, 300);
+    }, 1000);
+
+}, 4000);
 
 }, 4000);
 
