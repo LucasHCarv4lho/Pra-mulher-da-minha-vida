@@ -3,6 +3,10 @@ console.log("VERSAO 2026 TESTE");
 // CARROSSEL DE FOTOS
 // ======================
 
+// ======================
+// CARROSSEL DE FOTOS
+// ======================
+
 const images = [
     "Imagem1.jpg",
     "Imagem2.jpg",
@@ -14,15 +18,8 @@ const images = [
 
 let currentImage = 0;
 
-const albumImage = document.getElementById("albumImage");
-
-setInterval(() => {
-
-    currentImage++;
-
-    if (currentImage >= images.length) {
-        currentImage = 0;
-    }
+const albumImage =
+document.getElementById("albumImage");
 
 setInterval(() => {
 
@@ -37,14 +34,9 @@ setInterval(() => {
     setTimeout(() => {
 
         albumImage.src = images[currentImage];
-
-        albumImage.onload = () => {
-            albumImage.style.opacity = 1;
-        };
+        albumImage.style.opacity = 1;
 
     }, 1000);
-
-}, 4000);
 
 }, 4000);
 
